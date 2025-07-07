@@ -2299,7 +2299,7 @@ wfuzz --hh 0 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.tx
 ##### Subdomain
 
 ```c
-wfuzz -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt -H "Host: FUZZ.<RHOST>" --hc 200 --hw 356 -t 100 <RHOST>
+wfuzz -c -f subdomain_resultaten -w /opt/SecLists/Discovery/DNS/subdomains-top1million-110000.txt -u "http://<RHOST>" -H "Host: FUZZ.<RHOST>" -t 42 --hl 107
 ```
 
 ##### Git
